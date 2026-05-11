@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  /* Ziyo Yog'dusi brand palette */
+  --background: #fff8f1;
+  --foreground: #1a0a05;
+
+  --zy-red-50:  #fff1ef;
+  --zy-red-100: #ffe0db;
+  --zy-red-200: #ffbfb4;
+  --zy-red-300: #ff9080;
+  --zy-red-400: #f8624a;
+  --zy-red-500: #e63946;
+  --zy-red-600: #c41e2e;
+  --zy-red-700: #9a1622;
+  --zy-red-800: #6e0f18;
+  --zy-red-900: #44090e;
+
+  --zy-gold-300: #ffd56b;
+  --zy-gold-400: #f9b233;
+  --zy-gold-500: #e89519;
+  --zy-gold-600: #c47a10;
+
+  --zy-cream: #fff8f1;
+  --zy-cream-2: #ffeedd;
+  --zy-ink: #1a0a05;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-zy-red: var(--zy-red-500);
+  --color-zy-red-dark: var(--zy-red-700);
+  --color-zy-gold: var(--zy-gold-400);
+  --color-zy-cream: var(--zy-cream);
+  --color-zy-ink: var(--zy-ink);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* === Asosiy gradientlar === */
+.zy-gradient-bg {
+  background: linear-gradient(135deg, #e63946 0%, #c41e2e 35%, #9a1622 65%, #f9b233 110%);
+}
+
+.zy-gradient-soft {
+  background: linear-gradient(135deg, #fff8f1 0%, #ffeedd 50%, #ffe0db 100%);
+}
+
+.zy-gradient-hero {
+  background:
+    radial-gradient(1200px 600px at 10% 0%, rgba(249, 178, 51, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(230, 57, 70, 0.35), transparent 55%),
+    linear-gradient(135deg, #6e0f18 0%, #9a1622 30%, #c41e2e 60%, #e63946 100%);
+}
+
+.zy-gradient-text {
+  background: linear-gradient(135deg, #f9b233 0%, #e63946 50%, #c41e2e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.zy-gradient-btn {
+  background: linear-gradient(135deg, #e63946 0%, #c41e2e 50%, #f9b233 130%);
+  color: #fff;
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+  box-shadow: 0 10px 25px -10px rgba(196, 30, 46, 0.55);
+}
+.zy-gradient-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 18px 35px -12px rgba(196, 30, 46, 0.7);
+}
+
+.zy-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.zy-card {
+  background: #ffffff;
+  border: 1px solid #ffe0db;
+  box-shadow: 0 10px 30px -15px rgba(154, 22, 34, 0.18);
+  border-radius: 1.25rem;
+}
+
+.zy-input {
+  background: #ffffff;
+  border: 1.5px solid #ffd5cc;
+  color: var(--zy-ink);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.zy-input:focus {
+  outline: none;
+  border-color: var(--zy-red-500);
+  box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.15);
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes zy-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+.zy-float { animation: zy-float 6s ease-in-out infinite; }
+
+@keyframes zy-gradient-move {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+.zy-animated-gradient {
+  background: linear-gradient(120deg, #e63946, #c41e2e, #f9b233, #e63946);
+  background-size: 300% 300%;
+  animation: zy-gradient-move 12s ease infinite;
+}
+
+.vg-page {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+
+  --vg-bg: #fff8f1;
+  --vg-bg-2: #ffeedd;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #fff1ef; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e63946, #c41e2e);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f8624a, #9a1622);
+}

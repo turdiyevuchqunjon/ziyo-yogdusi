@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="zyGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e63946"/>
+      <stop offset="0.6" stop-color="#c41e2e"/>
+      <stop offset="1" stop-color="#f9b233"/>
+    </linearGradient>
+    <linearGradient id="zyRing" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9b233"/>
+      <stop offset="1" stop-color="#e63946"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" stroke="url(#zyRing)" stroke-width="6" fill="white"/>
+  <circle cx="100" cy="100" r="80" fill="url(#zyGrad)"/>
+  <text x="100" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="900" fill="white">ZY</text>
+  <text x="100" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="2">XUSUSIY</text>
+  <text x="100" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="2">MAKTABI</text>
+</svg>

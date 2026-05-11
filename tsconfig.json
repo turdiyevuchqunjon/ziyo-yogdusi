@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* ⚙️ Asosiy sozlamalar */
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    /* 🧠 Tip tekshiruv va xavfsizlik */
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "incremental": true,
+
+    /* 📦 Modul va yo‘llar */
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+
+    /* ⚛️ React konfiguratsiyasi */
+    "jsx": "react-jsx",
+
+    /* 🧩 Next.js plugin */
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+
+  /* 📂 Loyihadagi fayllar */
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+
+  /* 🚫 Chiqarmaslik kerak bo‘lgan fayllar */
+  "exclude": ["node_modules"]
+}

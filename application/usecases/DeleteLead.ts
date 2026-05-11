@@ -1,0 +1,2 @@
+import type { ILeadRepository } from "@/domain/repositories/ILeadRepository";
+export class DeleteLead { constructor(private repo: ILeadRepository) {} async exec(id: string) { await this.repo.delete(id); } }
